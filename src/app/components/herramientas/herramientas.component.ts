@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HerramientasService, Herramienta } from 'src/app/service/herramientas.service';
 
 @Component({
   selector: 'app-herramientas',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HerramientasComponent implements OnInit {
 
-  constructor() { }
+  herramientas:Herramienta[]=[]
+
+  constructor( private _herramientasService:HerramientasService ) { }
 
   ngOnInit(): void {
+
+    this. herramientas=this._herramientasService.getHerramientas();
+    console.log(this.herramientas);
   }
 
 }

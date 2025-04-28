@@ -10,6 +10,8 @@ import { HerramientasComponent } from './components/herramientas/herramientas.co
 
 import { APP_ROUTING } from './app.routes';
 
+import { HerramientasService } from './service/herramientas.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { APP_ROUTING } from './app.routes';
     AppRoutingModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    HerramientasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
